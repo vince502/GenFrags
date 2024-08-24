@@ -84,13 +84,24 @@ d0filter = cms.EDFilter(
     AcceptMore = cms.bool(True),
     EtaMax = cms.vdouble(2.5, 2.5),
     EtaMin = cms.vdouble(-2.5, -2.5),
-    MotherID = cms.untracked.vint32(413, -413),
+    MotherID = cms.untracked.vint32(421),
     NumRequired = cms.int32(1),
-    ParticleID = cms.vint32(421, -421),
-    PtMin = cms.vdouble(0, 0),
+    ParticleID = cms.vint32(-321, 211),
+    PtMin = cms.vdouble(0.4, 0.4),
     Status = cms.vint32(0, 0)
 
 )
 
+decayfilter = cms.EDFilter(
+    "PythiaDauVFilter",
+    verbose         = cms.untracked.int32(1),
+    NumberDaughters = cms.untracked.int32(2),
+    ParticleID      = cms.untracked.int32(413),  ## DStar+ (already chage conjugate)
+    DaughterIDs     = cms.untracked.vint32(421,211), ## D0 and pi+
+    MinPt           = cms.untracked.vdouble( 0. ,  0.4), ## cuts based on data
+    MinEta          = cms.untracked.vdouble(-2.8, -2.8), ## cuts based on data
+    MaxEta          = cms.untracked.vdouble( 2.8,  2.8) ## cuts based on data
+)
 
-ProductionFilterSequence = cms.Sequence(generator*dfilter*d0filter)
+
+ProductionFilterSequence = cms.Sequence(generator*dfilter*decayfilter*d0filter)
