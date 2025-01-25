@@ -3,13 +3,13 @@
 #------------------------------------
 #GenXsecAnalyzer:
 #------------------------------------
-#Before Filter: total cross section = 1.238e+06 +- 6.915e+03 pb
-#Filter efficiency (taking into account weights)= (2033) / (10000) = 2.033e-01 +- 4.025e-03
-#Filter efficiency (event-level)= (2033) / (10000) = 2.033e-01 +- 4.025e-03    [TO BE USED IN MCM]
+#Before Filter: total cross section = 4.042e+06 +- 1.950e+04 pb
+#Filter efficiency (taking into account weights)= (255.763) / (1653.15) = 1.547e-01 +- 4.040e-03
+#Filter efficiency (event-level)= (1829) / (10000) = 1.829e-01 +- 3.866e-03    [TO BE USED IN MCM]
 #
-#After filter: final cross section = 2.517e+05 +- 5.178e+03 pb
+#After filter: final cross section = 6.254e+05 +- 1.661e+04 pb
 #After filter: final fraction of events with negative weights = 0.000e+00 +- 0.000e+00
-#After filter: final equivalent lumi for 1M events (1/fb) = 3.972e-03 +- 8.180e-05
+#After filter: final equivalent lumi for 1M events (1/fb) = 1.599e-03 +- 4.249e-05
 
 # 0.510 sec/event in AMD EPYC-Genoa Processor, 332 kB/event
 
